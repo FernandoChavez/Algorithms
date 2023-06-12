@@ -3,7 +3,7 @@ package com.fuerzadon.primeNumer;
 public class App 
 {
     public static void main( String[] args ){
-    	int num = 7;
+    	int num = 25;
     	PrimeNumbers number = new PrimeNumbers(num);
     	System.out.println(num +" es primo? "+number.isPrime());
     	

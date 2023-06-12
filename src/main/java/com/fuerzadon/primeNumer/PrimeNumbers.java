@@ -9,11 +9,17 @@ public class PrimeNumbers {
 	}
 	
 	public boolean isPrime() {
+		
+		if(number <=1) {
+			return false;
+		}
+		
 		for(int x = 2; x*x <=number; x++) {
 			if(number%x == 0) {
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	

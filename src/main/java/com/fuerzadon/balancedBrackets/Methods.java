@@ -1,35 +1,46 @@
 package com.fuerzadon.balancedBrackets;
 
+import java.util.Stack;
+
 public class Methods {
 	
 	static boolean isBalanced(String str) {
-		if(str == null || ((str.length() % 2) != 0)) {
-			return false;	
-		}else {
-			char[] ch = str.toCharArray();
-			for(char c : ch) {
-				if(!(c== '{' || c == '[' || c == '(' || c== '}' || c == ']' || c == ')')) {
-					return false;
+		
+		if(str.length()%2 != 0){
+            return false;
+        }
+		
+		Stack<Character> stack = new Stack<>();
+		char[] chars = str.toCharArray();
+		String prefix = "{([", surfix = "})]";
+		
+		
+		for(char ch : chars) {
+			if(prefix.contains(ch +"")){
+				stack.push(ch);
+			}else {
+				
+				for(int i = 0; i<surfix.length(); i++) {
+					if(ch == surfix.charAt(i)) {
+						if(stack.size() ==0 || stack.peek() != prefix.charAt(i)) {
+							return false;
+						}
+						stack.pop();
+					}
+					
 				}
 			}
-		}	
-		return true;
-	}
-	
-	
-	static boolean isBalancedReplaceAllMethod(String str) {
-		while(str.contains("()") || str.contains("[]") || str.contains("{}")) {
-			str = str.replaceAll("\\(\\)", "")
-					.replaceAll("\\[\\]", "")
-					.replaceAll("\\{\\}", "");
 		}
-		return(str.length() == 0);
-	
+		
+		if(stack.size()==0) {
+			return true;
+		}
+			
+		return false;
 	}
 	
-	static boolean stackMethod(String Str) {
-		
 	
+	static boolean condition(char bracket, Stack stack) {
 		
 		return false;
 	}
