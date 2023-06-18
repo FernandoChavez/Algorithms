@@ -32,18 +32,11 @@ public class Methods {
 			}
 		}
 		
-		if(stack.size()==0) {
-			return true;
-		}
-			
-		return false;
+		return (stack.size() == 0 ? true : false);
 	}
 	
 	
-	static boolean condition(char bracket, Stack stack) {
-		
-		return false;
-	}
+	
 	
 	
 }
