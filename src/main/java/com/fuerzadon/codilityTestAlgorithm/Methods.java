@@ -11,13 +11,11 @@ class Methods {
         int size = A.length;
 
         for(int x=0; x<size-1; x++){
-            if(A[x]>0){
-                if((A[x]+1 != A[x+1]) && (A[x] < A[x+1])){
-                    return A[x]+1;
-                }
-            }     
+        	if(( A[x]>0) && (A[x]+1 != A[x+1]) && (A[x] < A[x+1] )){
+        		return A[x]+1;
+            } 
         }
-        
+
         return(A[size-1]<1 ? 1 : A[size-1]+1);
 
     }
