@@ -13,7 +13,6 @@ public class findDuplicatesInStream {
     Stream<Integer> stream = Stream.of(5, 13, 4, 21, 13, 27, 2, 59, 59, 34);
     List<Integer> list = Arrays.asList(5, 13, 4, 21, 13, 27, 2, 59, 59, 34);
         
-  
         // Print the found duplicate elements
         System.out.println(Methods.findDuplicateInStream(stream));	
         
