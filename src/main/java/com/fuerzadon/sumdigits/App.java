@@ -13,7 +13,7 @@ public class App {
     	//objSum1.sumDigitsFirstWay();
     	//objSum2.sumDigitsFirstWay();
     	objSum1.sumDigitsFirstWay();
-    	objSum3.sumDigitsFirstWay();
+    	//objSum3.sumDigitsFirstWay();
 	}
 
 }

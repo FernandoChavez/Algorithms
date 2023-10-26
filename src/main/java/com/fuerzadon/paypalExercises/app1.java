@@ -1,5 +1,7 @@
 package com.fuerzadon.paypalExercises;
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class app1 {
@@ -22,6 +24,24 @@ public class app1 {
 		  
 			}
 			*/
+		/*
+		List<Character> list = new ArrayList<>();	
+		
+		for(char ch : word.toCharArray()) {
+			list.add(ch);
+		}*/
+		String word = "elphebet";
+		
+		List<Character> list = new ArrayList<>();
+		
+		for(char ch : word.toCharArray()) {
+			list.add(ch);	
+		}
+		
+		int count = (int) list.stream()
+				.filter(i -> i=='e')
+				.count();
+		System.out.println(count);	
+	
 	}
-
 }

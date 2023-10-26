@@ -1,5 +1,8 @@
 package com.fuerzadon.sumdigits;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SumDigitIntenger {
 	int num;
 	

@@ -1,4 +1,6 @@
-package com.fuerzadon.primeNumer;
+package com.fuerzadon.primeNumber;
+
+import java.util.List;
 
 public class PrimeNumbersStatic {
 	
@@ -16,14 +18,28 @@ public class PrimeNumbersStatic {
 	}
 	*/
 	
+	static int numberPrimes(List<Integer> list) {	
+		return (int) list.stream()
+			.filter(i -> isPrime(i))
+			.count();
+	}
+	
 	static boolean isPrime(int num) {
+		
+		if(num<2){
+			return false;
+		}
+		
 		for(int x=2; x*x <=num; x++) {
 			if(num%x==0)
 				return false;	
 		}
+		
 		return true;
-			
+		//return (num >1 ? true : false);	
 	}
+	
+	
 	
 	
 	

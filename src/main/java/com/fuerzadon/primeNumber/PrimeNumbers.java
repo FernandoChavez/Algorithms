@@ -1,4 +1,4 @@
-package com.fuerzadon.primeNumer;
+package com.fuerzadon.primeNumber;
 
 public class PrimeNumbers {
 		
