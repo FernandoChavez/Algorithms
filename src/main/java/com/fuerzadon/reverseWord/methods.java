@@ -14,4 +14,23 @@ public class methods {
 		
 		return new String(chs);
 	}
+	
+	public static String reverseString2(String word) {
+		String reverse = "";
+			for(int x = word.length()-1; x>=0; x--) {
+				reverse += word.charAt(x);
+			}	
+		return reverse;
+		
+	}
+	
+	public static String reverseString3(String word) {
+		String reverse = "";
+		int size = word.length()/2;
+			for(int x = 0; x< size; x++) {
+				reverse += word.charAt(x);
+			}	
+		return reverse;
+		
+	}
 }
