@@ -7,6 +7,7 @@ public class App {
 		char arrayLetters[] = {'f','s','a','n','e','j','w','j','t','s','s','n'};
 		System.out.println(Odd.oddNumRepeat(arrayLetters));
 		System.out.println(Odd.getLettersOddPosition(arrayLetters));
+		System.out.println(Odd.getLettersOddPositionStreams(arrayLetters));
 	}
 
 }

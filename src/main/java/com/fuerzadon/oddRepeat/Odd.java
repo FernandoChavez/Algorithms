@@ -1,6 +1,10 @@
 package com.fuerzadon.oddRepeat;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Odd {
 
@@ -24,11 +28,26 @@ public class Odd {
 		ArrayList<Character> arraLettersOddPosition = new ArrayList<Character>();
 		
 		for(int i = 0; i< letters.length; i++) {
-			int position = alphabet.indexOf(letters[i]) +1;
-			if(position %2 != 0) 
+			if(getPositionAlphabet(letters[i], alphabet) %2 != 0) 
 				arraLettersOddPosition.add(letters[i]);
 		}
 		
 		return arraLettersOddPosition;
+	}
+	
+	
+	public static List<Character> getLettersOddPositionStreams(char letters[]){
+		String alphabet = "abcdefghijklmnopqrstuvwxyz";
+		Stream<Character> stream = new String(letters).chars().mapToObj(c ->(char)c);
+		
+		//[f,s,a,n,e,j,w,j,t,s,s,n] Out: [s, a, e, w, s, s] 
+		return stream
+				.filter(i -> getPositionAlphabet(i, alphabet)%2 != 0)
+				.collect(Collectors.toList());
+	}
+	
+	
+	public static int getPositionAlphabet(char letter, String alphabet) {
+		return alphabet.indexOf(letter + 1);
 	}
 }
